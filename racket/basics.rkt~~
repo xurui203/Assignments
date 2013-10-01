@@ -113,12 +113,7 @@
 
 
 ;;; Return the nth element of a list
-(define (nth lst n)
-  (cond 
-    ((null? lst) '())
-    ((zero? n) (car lst))
-    (else 
-     (nth (cdr lst) (- n 1)))))
+(define (nth lst n) null)
 
 ;;; Return a list containing the unique elements of lst
 (define (dedup lst)
@@ -134,16 +129,11 @@
 ;;; Return a list containing the elements of lst in reverse order
 (define (reverse lst) 
   (define (rev-h lst rlst)
-    (cond 
-      ((null? lst) rlst)
-      (else 
-       (rev-h (cdr lst) (cons (car lst) rlst)))
+    ((null? lst)    
     )
   )
-  (rev-h lst '())
+ 
 )
-
-
 (provide
  sum-to-n
  combination
